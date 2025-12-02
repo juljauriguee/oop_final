@@ -1,0 +1,16 @@
+[
+    {
+        "id": "692d11cfe3c09",
+        "IName": "apple",
+        "Category": "Fruits",
+        "Qty": 30,
+        "Price": 24
+    },
+    {
+        "id": "692d12121d73c",
+        "IName": "Rice",
+        "Category": "Grains",
+        "Qty": 50,
+        "Price": 58
+    }
+]
