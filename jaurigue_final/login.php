@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVENTIFY - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
@@ -24,37 +25,43 @@
             }
         }
         ?>
+        <div class="whole">
+            <div class="welcome">
+                <div class="container">
+                    <img src="unnamed.jpg" alt="">
+                        <span>INVENTIFY</span>
+                            <p>"Knows what's on your shelves better than you do."</p> 
+                </div>
+            </div>
 
-            <div class="form">
-
-
+            <div class="form-login">
                 <form action="login.php" method="POST">
-
-
                     <h1 style="text-align: center; margin-bottom: 20px; font-size: 34px;">Login</h1>
-
-
                  <?php
                     if (!empty($message)) {
-                        echo "<p style='text-align: center; margin-bottom: 20px; font-size: 15px;'>$message</p>";
+                        echo "<p style='text-align: center; margin-bottom: 18px; font-size: 15px;'>$message</p>";
                     }
                  ?>
-
-
                     <label for="uname">Username:</label>
                     <input type="text" name="username" required placeholder="Enter Username"><br>
-
 
                     <label for="password">Password:</label>
                     <input type="password" name="password" required placeholder="Enter Password"> <br>
 
-
                     <button type="submit">Login</button>
-
 
                     <p>Don't have an account? <a href="register.php">Register</a></p>
                 </form>
             </div>
+        </div>
+
+            <footer>
+                <h2>JIJI TECHNOLOGIES</h2>
+
+                <hr>
+
+                <h4>©2025 JIJITECH. All Rights Reserved.</h4>
+            </footer>
 
 </body>
 </html>

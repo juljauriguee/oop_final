@@ -14,7 +14,7 @@ class User{
     }
 
 
-    public function register($name, $username, $password){
+    public function register($Fname, $Lname, $username, $password){
         foreach($this->users as $user){
             if($user["username"]==$username){
                 return "Username is already taken.";
@@ -22,7 +22,8 @@ class User{
             }
         }
         $this->users[]=[
-            "name"=>$name,
+            "firstName"=>$Fname,
+            "lastName"=> $Lname,
             "username"=>$username,
             "password"=>password_hash($password, PASSWORD_DEFAULT)
         ];
@@ -35,7 +36,7 @@ class User{
         foreach($this->users as $user){
             if($user["username"]==$username){
                 if(password_verify($password,$user["password"])){
-                    $_SESSION["First name"] = $user["First name"];
+                    $_SESSION["firstName"] = $user["firstName"];
                     return "Login Successful.";
                 }else {
                     return "Invalid Password.";

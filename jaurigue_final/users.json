@@ -1,14 +1,26 @@
 [
     {
-        "First name": null,
-        "Last name": null,
-        "username": "123",
-        "password": "$2y$10$wgExgLzknxLwJwMAhuE0ve00FOOvCPpHFpoivI2Cl2A9laVaKRmTe"
+        "firstName": "JULIANA",
+        "lastName": "JAURIGUE",
+        "username": "howrigue",
+        "password": "$2y$10$yFMKEqlunMJXhGkRb1ZxM.jT5ii7XIFHawkQHT5kPRhd\/hlsqP3YS"
     },
     {
-        "First name": null,
-        "Last name": null,
-        "username": "jj",
-        "password": "$2y$10$KZJVDSYlm.IAiNcWqMOepumvXQ55j3hnU89hPeMBpCEuD8hmStOGm"
+        "firstName": "jij",
+        "lastName": "jiji",
+        "username": "1234",
+        "password": "$2y$10$3hGq3q9MMRP0hpoiVyZPj.QS2qojNaVBdzp0WgbGx11ltF0aIkGj2"
+    },
+    {
+        "firstName": "Juliana",
+        "lastName": "Juliana",
+        "username": "jijitech",
+        "password": "$2y$10$IToeM.lUyrG66PGhfCR3quRtF4gWAHvt6h.7AtgMsLyNbD2q1OXQ."
+    },
+    {
+        "firstName": "Farah",
+        "lastName": "Sultana",
+        "username": "FSultana",
+        "password": "$2y$10$n3AShSL8J0rOwIIPWotA7.xkm.XisPGSnqmTjyXXpI5zyYA7M18Ti"
     }
 ]

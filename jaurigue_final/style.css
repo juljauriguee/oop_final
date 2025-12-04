@@ -9,25 +9,27 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/* welcome dashboard */
-
 .welcome {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    padding: 40px;
 }
-.welcome h1 {
-    margin: 0;
-    font-size: 48px;
+.welcome .container img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.welcome .container span {
+    font-size: 40px;
     font-weight: bold;
-    color: #2b475c;
+    display: block;
+    margin-bottom: 10px;
 }
-.welcome h4 {
-    margin-top: 10px;
+.welcome .container p {
     font-size: 18px;
-    color: #555;
-    font-weight: normal;
 }
 
 /* login + register */
@@ -137,13 +139,26 @@ body {
 .header .logout:hover {
     background-color: rgba(126, 173, 202, 1);
 }
-
+.welcome-dashboard {
+    margin: 30px auto;
+    text-align: center;
+}
+.welcome-dashboard h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #2b475c;
+}
+.welcome-dashboard h4 {
+    color: #57788b;
+    margin-top: 10px;
+}
 
 /* addItem */
 .addItem {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 .addItem form {
     display: flex;
@@ -249,7 +264,6 @@ td a:hover {
 }
 
 /* editPopUp */
-
 .editModal {
     display: none;
     position: fixed;

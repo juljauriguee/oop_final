@@ -20,16 +20,15 @@
 
     <header class="header">
     <div class="logo">
-        <img src="logo.png" alt="">
+        <img src="unnamed.jpg" alt="">
         <span>INVENTIFY</span>
     </div>
     <button class="logout"><a href="logout.php">Logout</a></button>
 </header>
 
-
-    <div class="welcome">
-        <h1>Welcome, <?php echo $_SESSION["First name"]?></h1>
-            <p>Here's where you can organize your products and keep your inventory up to date.</p>
+    <div class="welcome-dashboard">
+        <h1>Welcome, <?php echo $_SESSION["firstName"]?>!</h1>
+        <h4>Here's where you can organize your products and keep your inventory up to date.</h4>
     </div>
 <hr>
     <?php
@@ -88,41 +87,78 @@
 
     ?>
 
-    <form method="POST" action="dashboard.php">
-        <label for="IName">Item Name:</label>
-            <input type="text" name="IName" id="IName" required placeholder="e.g., Tomatoes">
+    <div class="addItem">
+        <form method="POST" action="dashboard.php">
+                <label for="IName">Item Name:</label>
+                <input type="text" name="IName" id="IName" required placeholder="Enter Items">  
 
-            <label for="Category">Category:</label>
-            <select name="Category" id="Category" required>
-                <option value="">-- Select Category --</option>
-                <option value="Vegetables">Vegetables</option>
-                <option value="Fruits">Fruits</option>
-                <option value="Grains">Grains</option>
-                <option value="Herbs">Herbs</option>
-                <option value="Other">Other</option>
-            </select>
+                <label for="Category">Category:</label>
+                <select name="Category" id="Category" required>
+                    <option value="">---- Select Category ----</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Grains">Grains</option>
+                    <option value="Herbs">Herbs</option>
+                    <option value="Other">Other</option>
+                </select>
 
-            <label for="Qty">Quantity:</label>
-            <input type="number" name="Qty" id="Qty" required min="1" placeholder="Enter quantity in kg">
+                <label for="Qty">Quantity:</label>
+                <input type="number" name="Qty" id="Qty" required min="1" placeholder="Enter quantity in kg">
 
-            <label for="Price">Price:</label>
-            <input type="number" name="Price" id="Price" required min="0" step="0.01" placeholder="Price per unit">
+                <label for="Price">Price:</label>
+                <input type="number" name="Price" id="Price" required min="0" step="0.01" placeholder="Price per unit">
 
-            <button type="submit">Add Item</button>
-    </form>
+                <button type="submit">Add Item</button>
+        </form>
+    </div>
+
+    <div class="editModal" id="editModal">
+        <div class="editItem">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+                <h2>Edit Item</h2>
+
+                <form action="dashboard.php" method="POST">
+                    <input type="hidden" name="id" id="editId">
+
+                    <label for="editIName">Item Name:</label>
+                    <input type="text" name="IName" id="editIName" required >  
+
+                    <label for="editCategory">Category:</label>
+                    <select name="Category" id="editCategory" required>
+                        <option value="">---- Select Category ----</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Grains">Grains</option>
+                        <option value="Herbs">Herbs</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="editQty">Quantity:</label>
+                    <input type="number" name="Qty" id="editQty" required min="1" >
+
+                    <label for="editPrice">Price:</label>
+                    <input type="number" name="Price" id="editPrice" required min="0" step="0.01" >
+
+                <button type="submit">Edit Item</button>
+                </form>
+        </div>
+    </div>
+
 <hr>
 
     <div class="Inventory" >
         <table class="table" border="1">
             <thead >
                 <tr>
+                    <th colspan="5" class="itemTitle" style>Item List</th>
+                </tr>
+                <tr>
                     <th>Item Name</th>
                     <th>Category</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
+                    <th>Quantity (kg)</th>
+                    <th>Price per Kilo</th>
                 </tr>
             </thead>
-
 
             <tbody>
                 <?php
@@ -134,7 +170,9 @@
                     <td><?php echo $item["Qty"]; ?></td>
                     <td><?php echo "₱". number_format($item["Price"], 2); ?></td>
                     <td>
-                        <button onclick="openEditModal('<?php echo $item['id']; ?>')">Edit</button>
+                        <button 
+                        data-id="<?php echo $item['id']; ?>" 
+                        onclick="openEditModal('<?php echo $item['id']; ?>')">Edit</button>
                         <a href="?id=<?php echo $item['id']; ?>" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                     </td>
                 </tr>
@@ -143,6 +181,7 @@
             </tbody>
         </table>
     </div>
-
+    
+<script src="script.js"></script>
 </body>
 </html>
