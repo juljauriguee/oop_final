@@ -4,7 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVENTIFY - Register</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #eef3f7;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+        .whole {
+            display: flex;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+        .welcome .container img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .welcome .container span {
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .welcome .container p {
+            font-size: 18px;
+        }
+        .form-register {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-register form {
+            background: #ffffff;
+            padding: 30px;
+            width: 450px;       
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-register .form-name {
+            display: flex;
+            gap: 10px;
+        }
+        .form-register .form-name .contents {
+            flex: 1;
+        }
+        .form-register .form-name .contents label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .form-register .form-name .contents input {
+            width: 90%;
+        }
+        .form-register label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        .form-register input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-register button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-register p {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .form-register button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 2px;
+            background: #ffffff;
+            color: rgb(104, 102, 102);
+        }
+    </style>
 </head>
 <body>
     <?php

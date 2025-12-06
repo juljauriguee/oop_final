@@ -1,9 +1,37 @@
 [
     {
-        "id": "69303f4b241be",
-        "IName": "Orange",
+        "id": "69319384c9bb2",
+        "IName": "Mango",
         "Category": "Fruits",
-        "Qty": 10,
-        "Price": 28
+        "Qty": 46,
+        "Price": 46.25
+    },
+    {
+        "id": "693193bc1d6a6",
+        "IName": "Carrots",
+        "Category": "Vegetables",
+        "Qty": 22,
+        "Price": 26.8
+    },
+    {
+        "id": "693193d0a6f4f",
+        "IName": "Brown Rice",
+        "Category": "Grains",
+        "Qty": 120,
+        "Price": 59
+    },
+    {
+        "id": "6931940cdd503",
+        "IName": "Parsley",
+        "Category": "Herbs",
+        "Qty": 13,
+        "Price": 468
+    },
+    {
+        "id": "6931949fdb9e5",
+        "IName": "Egg",
+        "Category": "Other",
+        "Qty": 9,
+        "Price": 215
     }
 ]
